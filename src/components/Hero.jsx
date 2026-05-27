@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { profileHighlights, socials } from '../data/portfolio'
 
 function Hero() {
+  const publicPath = import.meta.env.BASE_URL
+
   return (
     <section id="home" className="relative isolate min-h-screen overflow-hidden px-4 pt-28 sm:px-6 lg:px-8">
       <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_18%_20%,rgba(34,211,238,0.20),transparent_28%),radial-gradient(circle_at_82%_12%,rgba(139,92,246,0.22),transparent_30%),linear-gradient(135deg,#020617_0%,#0f172a_48%,#111827_100%)]" />
@@ -33,7 +35,7 @@ function Hero() {
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
             <a
-              href="/Mittireddy_Purushottam_Naidu_Resume.pdf"
+              href={`${publicPath}Mittireddy_Purushottam_Naidu_Resume.pdf`}
               download
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-cyan-500/20 transition hover:-translate-y-1 hover:shadow-violet-500/25"
             >
@@ -74,7 +76,7 @@ function Hero() {
           <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.07] p-5 shadow-2xl shadow-black/30 backdrop-blur-xl">
             <div className="mx-auto aspect-square w-64 overflow-hidden rounded-full border border-white/15 bg-gradient-to-br from-cyan-400 via-blue-500 to-violet-600 p-1 shadow-2xl shadow-violet-500/15 sm:w-80">
               <img
-                src="/profile-photo.jpg"
+                src={`${publicPath}profile-photo.jpg`}
                 alt="Mittireddy Purushottam Naidu"
                 className="size-full rounded-full object-cover object-[50%_28%]"
               />

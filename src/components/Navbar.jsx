@@ -4,6 +4,7 @@ import { navLinks } from '../data/portfolio'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const publicPath = import.meta.env.BASE_URL
 
   const closeMenu = () => setIsOpen(false)
 
@@ -13,7 +14,7 @@ function Navbar() {
         <a href="#home" className="group flex items-center gap-3" onClick={closeMenu}>
           <span className="size-11 overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-400 via-blue-500 to-violet-500 p-0.5 shadow-lg shadow-cyan-500/20 transition-transform duration-300 group-hover:scale-105">
             <img
-              src="/profile-photo.jpg"
+              src={`${publicPath}profile-photo.jpg`}
               alt="Mittireddy Purushottam Naidu"
               className="size-full rounded-[0.875rem] object-cover object-[50%_28%]"
             />

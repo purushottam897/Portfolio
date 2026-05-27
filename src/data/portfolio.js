@@ -12,6 +12,8 @@ import {
   Target,
 } from 'lucide-react'
 
+const publicPath = import.meta.env.BASE_URL
+
 export const navLinks = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 
 export const socials = [
@@ -124,7 +126,7 @@ export const projects = [
       'Hands-on internship experience with workflow automation, enterprise-level systems, structured data, and business process optimization.',
     stack: ['ServiceNow', 'Workflow Automation', 'Enterprise Systems'],
     icon: BriefcaseBusiness,
-    codeUrl: '/ServiceNow_Virtual_Internship_Certificate.pdf',
+    codeUrl: `${publicPath}ServiceNow_Virtual_Internship_Certificate.pdf`,
   },
   {
     title: 'Certifications',
@@ -132,7 +134,7 @@ export const projects = [
       'Certified in ServiceNow System Administration and Oracle Foundations, strengthening platform and database fundamentals.',
     stack: ['ServiceNow CSA', 'Oracle Foundations'],
     icon: BadgeCheck,
-    codeUrl: '/ServiceNow_CSA_Certificate.pdf',
+    codeUrl: `${publicPath}ServiceNow_CSA_Certificate.pdf`,
   },
 ]
 
